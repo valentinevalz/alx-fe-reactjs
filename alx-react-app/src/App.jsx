@@ -1,26 +1,29 @@
+// React core
 import { useState } from 'react';
+
+// Assets and styles
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
-// Import your custom components ONCE
-import WelcomeMessage from './components/WelcomeMessage';
-import UserProfile from './components/UserProfile';
+// Custom components
 import Header from './Header';
 import MainContent from './MainContent';
 import Footer from './Footer';
+import WelcomeMessage from './components/WelcomeMessage';
+import UserProfile from './components/UserProfile';
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      {/* Vite & React logos */}
+      {/* Logos */}
       <div>
-        <a href="https://vite.dev" target="_blank">
+        <a href="https://vite.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
+        <a href="https://react.dev" target="_blank" rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
@@ -41,14 +44,14 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
 
-      {/* Your Custom Components */}
+      {/* Custom Components */}
+      <Header />
       <WelcomeMessage />
       <UserProfile
         name="Alice"
         age="25"
         bio="Loves hiking and photography"
       />
-      <Header />
       <MainContent />
       <Footer />
     </>
