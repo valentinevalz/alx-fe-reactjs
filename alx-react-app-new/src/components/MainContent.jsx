@@ -1,17 +1,16 @@
-import React from 'react';
+import React from "react";
 
-const MainContent = () => {
+function MainContent() {
   const contentStyle = {
-    padding: '20px',
-    backgroundColor: '#e8f4f8',
-    margin: '10px'
+    margin: "20px",
+    fontSize: "16px",
   };
 
   return (
     <div style={contentStyle}>
-      <p>This is the main content of the application.</p>
+      <p>I love to visit New York, Paris, and Tokyo.</p>
     </div>
   );
-};
+}
 
 export default MainContent;
