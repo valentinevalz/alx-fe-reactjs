@@ -1,12 +1,16 @@
 import React from 'react';
 
-function WelcomeMessage() {
-  return (
-    <div style={{ margin: '10px', padding: '10px', backgroundColor: '#e7f3ff' }}>
-      <h2>Welcome to the React App!</h2>
-      <p>We're glad to have you here.</p>
-    </div>
-  );
-}
+const WelcomeMessage = () => {
+  const styles = {
+    welcome: {
+      textAlign: 'center',
+      marginTop: '10px',
+      fontSize: '20px',
+      color: '#333'
+    }
+  };
+
+  return <div style={styles.welcome}>Welcome to the ALX React Project!</div>;
+};
 
 export default WelcomeMessage;
