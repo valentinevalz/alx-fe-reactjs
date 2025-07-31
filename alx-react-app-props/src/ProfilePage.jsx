@@ -1,10 +1,8 @@
-// alx-react-app-props/src/ProfilePage.jsx
-import React from 'react';
-import UserInfo from './UserInfo'; // Import the next component
+// src/ProfilePage.jsx
+import UserInfo from './UserInfo';
 
-// This component used to get userData as a prop, but now it doesn't need to!
 function ProfilePage() {
-  return <UserInfo />; // It just passes along the message without looking inside
+  return <UserInfo />;
 }
 
 export default ProfilePage;
