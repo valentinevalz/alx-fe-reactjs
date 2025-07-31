@@ -1,17 +1,16 @@
 import React from 'react';
 
 const MainContent = () => {
-  const styles = {
-    content: {
-      padding: '20px',
-      textAlign: 'center',
-    }
+  const contentStyle = {
+    padding: '20px',
+    backgroundColor: '#e8f4f8',
+    margin: '10px'
   };
 
   return (
-    <main style={styles.content}>
-      <h2>This is the main content of the application</h2>
-    </main>
+    <div style={contentStyle}>
+      <p>This is the main content of the application.</p>
+    </div>
   );
 };
 

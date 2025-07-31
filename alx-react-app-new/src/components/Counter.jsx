@@ -1,28 +1,27 @@
 import React, { useState } from 'react';
 
 const Counter = () => {
-  const styles = {
-    counter: {
-      textAlign: 'center',
-      marginTop: '20px'
-    },
-    button: {
-      margin: '5px',
-      padding: '10px 20px',
-      fontSize: '16px',
-      borderRadius: '6px',
-      cursor: 'pointer'
-    }
-  };
-
   const [count, setCount] = useState(0);
 
+  const counterStyle = {
+    textAlign: 'center',
+    margin: '20px',
+    padding: '10px',
+    backgroundColor: '#f0f0f0'
+  };
+
+  const buttonStyle = {
+    margin: '5px',
+    padding: '10px 15px',
+    fontSize: '16px'
+  };
+
   return (
-    <div style={styles.counter}>
-      <h3>Counter: {count}</h3>
-      <button style={styles.button} onClick={() => setCount(count + 1)}>Increment</button>
-      <button style={styles.button} onClick={() => setCount(count - 1)}>Decrement</button>
-      <button style={styles.button} onClick={() => setCount(0)}>Reset</button>
+    <div style={counterStyle}>
+      <h2>Counter: {count}</h2>
+      <button style={buttonStyle} onClick={() => setCount(count + 1)}>Increment</button>
+      <button style={buttonStyle} onClick={() => setCount(count - 1)}>Decrement</button>
+      <button style={buttonStyle} onClick={() => setCount(0)}>Reset</button>
     </div>
   );
 };

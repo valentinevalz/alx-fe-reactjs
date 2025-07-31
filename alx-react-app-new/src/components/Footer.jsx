@@ -1,17 +1,14 @@
 import React from 'react';
 
 const Footer = () => {
-  const styles = {
-    footer: {
-      marginTop: '20px',
-      padding: '10px',
-      backgroundColor: '#eee',
-      textAlign: 'center',
-      fontSize: '14px'
-    }
+  const footerStyle = {
+    backgroundColor: '#222',
+    color: '#fff',
+    padding: '10px',
+    textAlign: 'center'
   };
 
-  return <footer style={styles.footer}>© 2025 Valentine Jide</footer>;
+  return <footer style={footerStyle}>© 2025 Valentine</footer>;
 };
 
 export default Footer;

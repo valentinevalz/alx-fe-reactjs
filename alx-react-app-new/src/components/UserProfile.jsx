@@ -1,26 +1,22 @@
 import React from 'react';
 
-const UserProfile = ({ name, age }) => {
-  const styles = {
-    profile: {
-      padding: '10px',
-      border: '1px solid #ccc',
-      margin: '10px',
-      borderRadius: '8px'
-    },
-    name: {
-      fontWeight: 'bold',
-      fontSize: '18px'
-    },
-    age: {
-      color: 'gray'
-    }
+const UserProfile = () => {
+  const profileStyle = {
+    border: '1px solid gray',
+    padding: '10px',
+    borderRadius: '5px',
+    backgroundColor: '#f9f9f9',
+    margin: '10px'
+  };
+
+  const nameStyle = {
+    color: 'blue'
   };
 
   return (
-    <div style={styles.profile}>
-      <p style={styles.name}>Name: {name}</p>
-      <p style={styles.age}>Age: {age}</p>
+    <div style={profileStyle}>
+      <h2>User Profile</h2>
+      <span style={nameStyle}>Name: Valentine Jide</span>
     </div>
   );
 };

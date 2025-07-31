@@ -1,17 +1,14 @@
 import React from 'react';
 
 const Header = () => {
-  const styles = {
-    header: {
-      backgroundColor: '#282c34',
-      padding: '20px',
-      color: 'white',
-      textAlign: 'center',
-      fontSize: '24px'
-    }
+  const headerStyle = {
+    backgroundColor: '#282c34',
+    padding: '20px',
+    color: 'white',
+    textAlign: 'center'
   };
 
-  return <header style={styles.header}>Welcome to My React App</header>;
+  return <h1 style={headerStyle}>Welcome to My React App</h1>;
 };
 
 export default Header;
