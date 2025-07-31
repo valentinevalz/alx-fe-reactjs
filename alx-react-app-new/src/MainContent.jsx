@@ -1,8 +1,15 @@
+import React from 'react';
+
 function MainContent() {
+  const contentStyle = {
+    padding: '1rem',
+    textAlign: 'center',
+  };
+
   return (
-    <main>
-      <h2>Main Content Section</h2>
-      <p>This is where the main content lives.</p>
+    <main style={contentStyle}>
+      <h3>Main Content</h3>
+      <p>This is where your main content lives.</p>
     </main>
   );
 }
