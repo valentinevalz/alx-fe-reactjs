@@ -1,12 +1,12 @@
 // alx-react-app-new/src/App.jsx
-import React, { useState } from 'react'; // React, useState are needed
+import React, { useState } from 'react';
 
-// Assets and styles (from original Vite setup)
+// Assets and styles (from default Vite setup)
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
-// Import all custom components directly from src/
+// Import all custom components directly from src/ (NOT src/components/)
 import Header from './Header';
 import MainContent from './MainContent';
 import Footer from './Footer';
@@ -15,7 +15,7 @@ import UserProfile from './UserProfile';       // From previous project
 import Counter from './Counter';             // New for Task 1
 
 function App() {
-  // This state is from the default Vite + React template, you can keep it
+  // This useState is from the default Vite + React template, keep it if you want
   const [count, setCount] = useState(0);
 
   return (
@@ -48,8 +48,8 @@ function App() {
       <Header />
       <MainContent />
       <Footer />
-      <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
-      <WelcomeMessage /> {/* Including WelcomeMessage as well */}
+      <UserProfile name="Alice" age="25" bio="Loves hiking and photography" /> {/* Example usage */}
+      <WelcomeMessage /> {/* Example usage */}
 
       <hr /> {/* Visual separator */}
 
