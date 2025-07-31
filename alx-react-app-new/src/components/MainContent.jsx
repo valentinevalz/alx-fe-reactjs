@@ -1,15 +1,13 @@
 import React from "react";
 
 function MainContent() {
-  const contentStyle = {
-    margin: "20px",
-    fontSize: "16px",
-  };
-
   return (
-    <div style={contentStyle}>
-      <p>I love to visit New York, Paris, and Tokyo.</p>
-    </div>
+    <main style={{ padding: "20px", fontFamily: "Arial", backgroundColor: "#f5f5f5" }}>
+      <h2 style={{ color: "darkblue" }}>Favorite Travel Destinations</h2>
+      <p style={{ color: "black", fontSize: "16px" }}>
+        I love to visit New York, Paris, and Tokyo.
+      </p>
+    </main>
   );
 }
 
