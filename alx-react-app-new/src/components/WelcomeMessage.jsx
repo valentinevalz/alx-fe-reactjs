@@ -1,14 +1,12 @@
 import React from 'react';
 
 function WelcomeMessage() {
-  const style = {
-    padding: '1rem',
-    fontSize: '1.2rem',
-    color: '#333',
-    textAlign: 'center',
-  };
-
-  return <p style={style}>Welcome to the React Application!</p>;
+  return (
+    <div style={{ margin: '10px', padding: '10px', backgroundColor: '#e7f3ff' }}>
+      <h2>Welcome to the React App!</h2>
+      <p>We're glad to have you here.</p>
+    </div>
+  );
 }
 
 export default WelcomeMessage;

@@ -1,16 +1,9 @@
 import React from 'react';
 
 function Footer() {
-  const footerStyle = {
-    backgroundColor: '#eee',
-    padding: '1rem',
-    textAlign: 'center',
-    marginTop: '2rem',
-  };
-
   return (
-    <footer style={footerStyle}>
-      <p>&copy; 2025 My React App. All rights reserved.</p>
+    <footer style={{ backgroundColor: '#f1f1f1', padding: '10px', marginTop: '30px' }}>
+      <p>© 2025 Valentine Jide. All rights reserved.</p>
     </footer>
   );
 }

@@ -1,21 +1,18 @@
 import React from 'react';
 
-function UserProfile({ name, age, bio }) {
-  const profileStyle = {
-    border: '1px solid #ccc',
-    borderRadius: '10px',
-    padding: '1rem',
-    margin: '1rem auto',
-    maxWidth: '300px',
-    textAlign: 'center',
-    backgroundColor: '#f9f9f9',
+function UserProfile() {
+  const user = {
+    name: 'Valentine Jide',
+    email: 'odedeyivaz@gmail.com',
+    occupation: 'Software Engineer',
   };
 
   return (
-    <div style={profileStyle}>
-      <h4>{name}</h4>
-      <p>Age: {age}</p>
-      <p>{bio}</p>
+    <div style={{ border: '1px solid #ddd', padding: '10px', margin: '20px auto', width: '300px' }}>
+      <h3>User Profile</h3>
+      <p><strong>Name:</strong> {user.name}</p>
+      <p><strong>Email:</strong> {user.email}</p>
+      <p><strong>Occupation:</strong> {user.occupation}</p>
     </div>
   );
 }

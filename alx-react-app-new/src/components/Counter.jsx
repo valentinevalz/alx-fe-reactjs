@@ -3,32 +3,15 @@ import React, { useState } from 'react';
 function Counter() {
   const [count, setCount] = useState(0);
 
-  const counterStyle = {
-    textAlign: 'center',
-    margin: '1rem auto',
-    padding: '1rem',
-    border: '1px solid #ddd',
-    borderRadius: '10px',
-    maxWidth: '300px',
-  };
-
-  const buttonStyle = {
-    padding: '0.5rem 1rem',
-    margin: '0.5rem',
-    fontSize: '1rem',
-    cursor: 'pointer',
-  };
+  const handleIncrement = () => setCount(count + 1);
+  const handleDecrement = () => setCount(count - 1);
 
   return (
-    <div style={counterStyle}>
-      <h3>Counter</h3>
-      <p>Count is: {count}</p>
-      <button style={buttonStyle} onClick={() => setCount(count + 1)}>
-        Increment
-      </button>
-      <button style={buttonStyle} onClick={() => setCount(0)}>
-        Reset
-      </button>
+    <div style={{ margin: '20px' }}>
+      <h2>Simple Counter</h2>
+      <p style={{ fontSize: '24px' }}>Count: {count}</p>
+      <button onClick={handleIncrement} style={{ marginRight: '10px' }}>+</button>
+      <button onClick={handleDecrement}>-</button>
     </div>
   );
 }
