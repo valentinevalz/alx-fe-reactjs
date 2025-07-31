@@ -1,10 +1,8 @@
-// alx-react-app-new/src/MainContent.jsx
-import React from 'react';
-
 function MainContent() {
   return (
-    <main style={{ padding: '20px', backgroundColor: '#f0f0f0', textAlign: 'center' }}>
-      <p>I love to visit New York, Paris, and Tokyo.</p>
+    <main>
+      <h2>Main Content Section</h2>
+      <p>This is where the main content lives.</p>
     </main>
   );
 }
