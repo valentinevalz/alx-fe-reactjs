@@ -7,6 +7,8 @@ import RecipeList from './components/RecipeList';
 import RecipeDetail from './components/RecipeDetail';
 import AddRecipeForm from './components/AddRecipeForm';
 import EditRecipeForm from './components/EditRecipeForm';
+import FavoritesList from './components/FavoritesList';
+import RecommendationsList from './components/RecommendationsList';
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
           <Route path="/add" element={<AddRecipeForm />} />
           <Route path="/edit/:id" element={<EditRecipeForm />} />
         </Routes>
+        <FavoritesList />
+        <RecommendationsList />
       </div>
     </Router>
   );
