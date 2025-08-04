@@ -9,6 +9,14 @@ const Search = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  const fetchUserData = async (username) => {
+    return await searchGithubUsers({
+      username,
+      location: '',     // Customize if needed
+      minRepos: 0       // Customize if needed
+    });
+  };
+
   const handleSearch = async (e) => {
     e.preventDefault();
 
@@ -18,12 +26,7 @@ const Search = () => {
     setError(null);
 
     try {
-      const users = await searchGithubUsers({
-        username: query,
-        location: '',     // Optional: Add input to capture location
-        minRepos: 0       // Optional: Add input to capture repo count
-      });
-
+      const users = await fetchUserData(query);
       setResults(users);
     } catch (err) {
       setError('Error fetching data');
