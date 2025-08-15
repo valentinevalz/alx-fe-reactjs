@@ -1,35 +1,29 @@
-// src/components/RecipeDetail.jsx
-import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import recipesData from '../data.json';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import data from "../data.json";
 
 const RecipeDetail = () => {
   const { id } = useParams();
   const [recipe, setRecipe] = useState(null);
 
   useEffect(() => {
-    // Find the recipe matching the ID
-    const foundRecipe = recipesData.find((item) => item.id === parseInt(id, 10));
+    const foundRecipe = data.find((item) => item.id === parseInt(id));
     setRecipe(foundRecipe);
   }, [id]);
 
   if (!recipe) {
-    return <p>Loading recipe...</p>;
+    return <p>Loading...</p>;
   }
 
   return (
     <div>
       <h2>{recipe.title}</h2>
+      <img 
+        src={recipe.image} 
+        alt={recipe.title} 
+        style={{ maxWidth: "300px", borderRadius: "8px" }}
+      />
       <p>{recipe.description}</p>
-      <h4>Ingredients:</h4>
-      <ul>
-        {recipe.ingredients.map((ingredient, index) => (
-          <li key={index}>{ingredient}</li>
-        ))}
-      </ul>
-      <h4>Instructions:</h4>
-      <p>{recipe.instructions}</p>
-      <Link to="/">Back to Recipes</Link>
     </div>
   );
 };
