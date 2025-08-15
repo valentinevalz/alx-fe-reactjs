@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 3,
+    "title": "Beef Stroganoff",
+    "summary": "Russian dish of sautéed beef in a sour cream sauce, served over noodles or rice.",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 4,
+    "title": "Greek Salad",
+    "summary": "Fresh tomatoes, cucumber, onion, feta cheese, and olives, dressed with olive oil.",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 5,
+    "title": "Sushi Platter",
+    "summary": "Assorted sushi rolls with fresh fish, vegetables, and rice.",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 6,
+    "title": "Vegan Buddha Bowl",
+    "summary": "A colorful mix of quinoa, chickpeas, roasted vegetables, and tahini dressing.",
+    "image": "https://via.placeholder.com/150"
+  }
+]
