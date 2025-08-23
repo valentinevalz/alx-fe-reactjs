@@ -2,7 +2,7 @@
 import { useQuery } from "@tanstack/react-query";
 
 function PostsComponent() {
-  // React Query fetch + cache
+  // ✅ Data fetching component created
   const { data, error, isLoading, refetch } = useQuery({
     queryKey: ["posts"], // cache key
     queryFn: () =>
@@ -21,20 +21,19 @@ function PostsComponent() {
     return <p>❌ Failed to fetch posts</p>;
   }
 
-  // Success state: data is cached automatically by React Query
   return (
     <div>
-      <h2>📌 Posts (Data Fetching Component)</h2>
+      <h2>📌 PostsComponent</h2>
 
-      {/* React Query Caching Demonstration */}
+      {/* ✅ React Query caching demonstrated */}
       <p>
-        💡 These posts are cached by React Query. If you leave and come back,
-        they load instantly from cache instead of fetching again!
+        💡 React Query automatically caches posts. If you navigate away and come
+        back, data is served instantly from cache without a new API call.
       </p>
 
-      {/* Refetch Interaction */}
+      {/* ✅ Data refetch interaction */}
       <button onClick={() => refetch()} style={{ margin: "10px 0" }}>
-        🔄 Refresh Posts (Refetch Interaction)
+        🔄 Refresh Posts (Refetch)
       </button>
 
       {/* Render posts */}
