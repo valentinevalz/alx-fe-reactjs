@@ -1,24 +1,30 @@
-import { useQuery } from "react-query";
+// src/components/PostsComponent.jsx
+import { useQuery } from "@tanstack/react-query";
 
 function PostsComponent() {
-  // Ask React Query (mommy) to fetch posts
-  const { data, error, isLoading, refetch } = useQuery(
-    "posts", // key (like a label in toy box)
-    () => fetch("https://jsonplaceholder.typicode.com/posts")
-            .then((res) => res.json())
-  );
+  // useQuery = ask React Query to fetch + cache
+  const { data, error, isLoading, refetch } = useQuery({
+    queryKey: ["posts"], // cache key
+    queryFn: () =>
+      fetch("https://jsonplaceholder.typicode.com/posts").then((res) =>
+        res.json()
+      ),
+  });
 
-  // 🍼 Show loading
-  if (isLoading) return <p>⏳ Loading posts...</p>;
+  // Loading state
+  if (isLoading) {
+    return <p>⏳ Loading posts...</p>;
+  }
 
-  // 🍼 Show error
-  if (error) return <p>❌ Something went wrong!</p>;
+  // Error state
+  if (error) {
+    return <p>❌ Failed to fetch posts</p>;
+  }
 
+  // Data loaded
   return (
     <div>
-      <button onClick={() => refetch()} className="refresh">
-        🔄 Refresh Posts
-      </button>
+      <button onClick={() => refetch()}>🔄 Refresh Posts</button>
       <ul>
         {data.map((post) => (
           <li key={post.id}>
